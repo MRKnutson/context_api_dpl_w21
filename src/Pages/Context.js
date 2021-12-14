@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "semantic-ui-react";
-import User from "./User";
-import UserForm from "./UserForm";
+import User from "../components/User";
+import UserForm from "../components/UserForm";
 
 const Context = () => {
   return (
