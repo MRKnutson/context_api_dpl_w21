@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Form } from "semantic-ui-react";
+import { UserContext } from "../providers/UserProvider";
 
-const AccountForm = () => {
-const [firstName, setFirstName] = useState("");
-const [lastName, setLastName] = useState("");
-const [email, setEmail] = useState("");
-const [avatar, setAvatar] = useState("");
-
+const UserForm = () => {
+  const user = useContext(UserContext);
+  
+  const [firstName, setFirstName] = useState(user.firstName);
+  const [lastName, setLastName] = useState(user.lastName);
+  const [email, setEmail] = useState(user.email);
+  const [avatar, setAvatar] = useState(user.avatar);
+  
 const handleSubmit = (e) => {
   e.preventDefault();
-}
-
+  const updatedUser = {firstName:firstName, lastName:lastName, email:email, avatar:avatar,};
+  user.updateUser(updatedUser)
+};
 
   return (
    <div>
@@ -47,9 +51,9 @@ const handleSubmit = (e) => {
 };
 
 const avatarOptions = [
-  {key: "m", text: "Yogi", value:"", },
-  {key: "s", text: "Strawberry", value: "",},
-  {key: "r", text: "Dog", value: "",},
+  {key: "m", text: "Yogi", value:"https://cdn-icons-png.flaticon.com/512/84/84081.png", },
+  {key: "s", text: "Strawberry", value: "https://cdn-icons-png.flaticon.com/512/590/590685.png",},
+  {key: "r", text: "Dog", value: "https://cdn-icons-png.flaticon.com/512/616/616554.png",},
 ];
 
-export default AccountForm;
+export default UserForm;

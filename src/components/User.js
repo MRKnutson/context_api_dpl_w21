@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../providers/UserProvider";
+import {Card, CardContent, Image} from 'semantic-ui-react';
 
-const Account = () => {
+
+
+const User = () => {
+const user = useContext(UserContext)
+
   return (
-    <div>
-    <p>First Name: </p>
-    <p>Last Name: </p>
-    <p>Email: </p>
-    <p>Avatar: </p>
-    </div>
+    <Card>
+      <Image src = {user.avatar} wrapped ui = {false}/>
+      <Card.Content>
+    <Card.Header>Name: {user.firstName} {user.lastName}</Card.Header>
+    </Card.Content>
+    <CardContent>
+    <Card.Meta>Email: {user.email}</Card.Meta>
+    </CardContent>
+    </Card>
   );
 };
 
-export default Account;
+export default User;

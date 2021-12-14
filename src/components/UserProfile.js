@@ -1,6 +1,6 @@
 import React from "react";
-import Account from "./Account";
-import AccountForm from "./AccountForm";
+import Account from "./User";
+import AccountForm from "./UserForm";
 
 const AccountProfile = () => {
   return (
