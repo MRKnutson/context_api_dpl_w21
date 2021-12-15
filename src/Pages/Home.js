@@ -12,7 +12,7 @@
 // export default Home;
 
 import React, { Component } from 'react'
-import { Container, Form, Grid, Image, Transition } from 'semantic-ui-react'
+import { Container, Form, Grid, Icon, Image, Transition } from 'semantic-ui-react'
 
 // const Home = () => {
   const transitions = [
@@ -51,7 +51,7 @@ import { Container, Form, Grid, Image, Transition } from 'semantic-ui-react'
               duration={duration}
               visible={visible}
             >
-              <h1>Welcome to the Partyyyyy!!!</h1>
+              <h1 className="home">Welcome to the Partyyyyy!!!</h1>
             </Transition>
             <Transition
               animation={animation}
@@ -80,7 +80,10 @@ import { Container, Form, Grid, Image, Transition } from 'semantic-ui-react'
               type='range'
               value={duration}
             />
-            <Form.Button content='Run' onClick={this.toggleVisibility} />
+            <Form.Button color = "green" icon onClick={this.toggleVisibility}>
+              <Icon name="paper plane outline" />
+              &nbsp; Run
+              </Form.Button>
           </Grid.Column>
 
           

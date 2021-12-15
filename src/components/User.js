@@ -8,10 +8,10 @@ const User = () => {
 const user = useContext(UserContext)
 
   return (
-    <Card>
-      <Image src = {user.avatar} wrapped ui = {false}/>
+    <Card color = 'olive'>
+      <Image className="cardbg" src = {user.avatar} wrapped ui = {false}/>
       <Card.Content>
-    <Card.Header>Name: {user.firstName} {user.lastName}</Card.Header>
+    <Card.Header className="name">{user.firstName} {user.lastName}</Card.Header>
     </Card.Content>
     <CardContent>
     <Card.Meta>Email: {user.email}</Card.Meta>

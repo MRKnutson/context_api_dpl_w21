@@ -38,3 +38,31 @@
 }
 
 
+.home{
+  font-size: 70px !important;
+  text-align: center;
+  background: #7EACCF;
+  background: -webkit-repeating-radial-gradient(circle farthest-corner at center center, #7EACCF 0%, #93CF95 100%);
+  background: -moz-repeating-radial-gradient(circle farthest-corner at center center, #7EACCF 0%, #93CF95 100%);
+  background: repeating-radial-gradient(circle farthest-corner at center center, #7EACCF 0%, #93CF95 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.name{
+  background: #90CF51;
+  background: -webkit-radial-gradient(ellipse farthest-side at top center, #90CF51 0%, #CFBC8F 100%);
+  background: -moz-radial-gradient(ellipse farthest-side at top center, #90CF51 0%, #CFBC8F 100%);
+  background: radial-gradient(ellipse farthest-side at top center, #90CF51 0%, #CFBC8F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardbg{
+  background: rgb(238,174,202) !important;
+  background: radial-gradient(circle, rgba(238,174,202,1) 8%, rgba(148,187,233,1) 100%) !important;
+}
+
+h1{
+  color:#805f86
+}
